@@ -6,11 +6,10 @@ import  json
 # import flaskr
 from logging.config import fileConfig
 import os
-fileConfig('logging_config.ini')
+print (os.path.join(os.path.dirname(__file__) , 'logging_config.ini'))
+fileConfig(os.path.join(os.path.dirname(__file__) , 'logging_config.ini'))
 logging = logging.getLogger("TestSimpleRedisQueue")
-scriptpath = "../main"
-sys.path.insert(1, os.path.abspath(scriptpath))
-import simple_redis_queue as srq
+import main.simple_redis_queue as srq
 # ranjeet
 
 class TestSimpleRedisQueue(unittest.TestCase):

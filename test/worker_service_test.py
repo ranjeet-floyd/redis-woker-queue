@@ -4,11 +4,9 @@ import sys
 import uuid
 from logging.config import fileConfig
 import os
-fileConfig('logging_config.ini')
+fileConfig(os.path.join(os.path.dirname(__file__) , 'logging_config.ini'))
 logging = logging.getLogger("TestWorkerService")
-scriptpath = "../main"
-sys.path.insert(1, os.path.abspath(scriptpath))
-import worker_service as ws
+import main.worker_service as ws
 # ranjeet
 
 class TestWorkerService(unittest.TestCase):

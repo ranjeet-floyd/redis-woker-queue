@@ -4,11 +4,10 @@ import  json
 import sys
 from logging.config import fileConfig
 import os
-fileConfig('logging_config.ini')
-logging = logging.getLogger("worker_service")
-scriptpath = "../main"
-sys.path.insert(1, os.path.abspath(scriptpath))
-import main_service as main_service
+fileConfig(os.path.join(os.path.dirname(__file__) , 'logging_config.ini'))
+# fileConfig('logging_config.ini')
+logging = logging.getLogger("TestMainService")
+import main.main_service as main_service
 # ranjeet
 
 # Test flask rest service
