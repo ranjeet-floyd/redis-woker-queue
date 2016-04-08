@@ -33,6 +33,6 @@ def get_status(job_id):
 
 if __name__ == "__main__":
     host = '0.0.0.0'
-    port = 5001
+    port = 5000
     app.logger.info("Run on host :  %s and port : %s" %(host, str(port)))
     app.run(host=host, port=port)

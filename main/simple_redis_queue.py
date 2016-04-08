@@ -1,7 +1,9 @@
 import redis
 import logging
+import os
 from logging.config import fileConfig
-fileConfig('logging_config.ini')
+fileConfig(os.path.join(os.path.dirname(__file__) , 'logging_config.ini'))
+# fileConfig('logging_config.ini')
 logging = logging.getLogger("simple_redis_queue")
 
 # ranjeet

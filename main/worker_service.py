@@ -7,7 +7,9 @@ import time
 import logging
 from logging.config import fileConfig
 import os
-fileConfig('logging_config.ini')
+from logging.config import fileConfig
+fileConfig(os.path.join(os.path.dirname(__file__) , 'logging_config.ini'))
+# fileConfig('logging_config.ini')
 logging = logging.getLogger("worker_service")
 
 # ranjeet
